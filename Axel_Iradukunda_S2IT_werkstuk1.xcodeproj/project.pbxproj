@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FE3B7E2208A557C000B53AF /* Persoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3B7E1208A557C000B53AF /* Persoon.swift */; };
+		3FE3B7E4208A5D5C000B53AF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3B7E3208A5D5C000B53AF /* TableViewController.swift */; };
 		3FFC67DD208684450089D96F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFC67DC208684450089D96F /* AppDelegate.swift */; };
 		3FFC67DF208684450089D96F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFC67DE208684450089D96F /* ViewController.swift */; };
 		3FFC67E2208684450089D96F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFC67E0208684450089D96F /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FE3B7E1208A557C000B53AF /* Persoon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persoon.swift; sourceTree = "<group>"; };
+		3FE3B7E3208A5D5C000B53AF /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3FFC67D9208684450089D96F /* Axel_Iradukunda_S2IT_werkstuk1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Axel_Iradukunda_S2IT_werkstuk1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FFC67DC208684450089D96F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FFC67DE208684450089D96F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				3FFC67E8208684450089D96F /* LaunchScreen.storyboard */,
 				3FFC67EB208684450089D96F /* Info.plist */,
 				3FFC67E3208684450089D96F /* Axel_Iradukunda_S2IT_werkstuk1.xcdatamodeld */,
+				3FE3B7E1208A557C000B53AF /* Persoon.swift */,
+				3FE3B7E3208A5D5C000B53AF /* TableViewController.swift */,
 			);
 			path = Axel_Iradukunda_S2IT_werkstuk1;
 			sourceTree = "<group>";
@@ -264,6 +270,8 @@
 			files = (
 				3FFC67DF208684450089D96F /* ViewController.swift in Sources */,
 				3FFC67E5208684450089D96F /* Axel_Iradukunda_S2IT_werkstuk1.xcdatamodeld in Sources */,
+				3FE3B7E2208A557C000B53AF /* Persoon.swift in Sources */,
+				3FE3B7E4208A5D5C000B53AF /* TableViewController.swift in Sources */,
 				3FFC67DD208684450089D96F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +515,7 @@
 				3FFC6806208684450089D96F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FFC6807208684450089D96F /* Build configuration list for PBXNativeTarget "Axel_Iradukunda_S2IT_werkstuk1Tests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +524,7 @@
 				3FFC6809208684450089D96F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FFC680A208684450089D96F /* Build configuration list for PBXNativeTarget "Axel_Iradukunda_S2IT_werkstuk1UITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +533,7 @@
 				3FFC680C208684450089D96F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
