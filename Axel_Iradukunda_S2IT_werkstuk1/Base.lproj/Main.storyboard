@@ -6,10 +6,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Contacts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Axel_Iradukunda_S2IT_werkstuk1" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,11 +21,63 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cao-3t-7fW">
+                                <rect key="frame" x="67" y="66" width="240" height="217"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VolledigeNaam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qn1-Uk-Kka">
+                                <rect key="frame" x="67" y="323" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsK-8J-0TW">
+                                <rect key="frame" x="67" y="352" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gpscoordinaten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3E-bl-Omg">
+                                <rect key="frame" x="67" y="381" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefoonnummer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCy-1Z-Oze">
+                                <rect key="frame" x="67" y="410" width="130" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nsK-8J-0TW" firstAttribute="top" secondItem="qn1-Uk-Kka" secondAttribute="bottom" constant="8" symbolic="YES" id="2hp-8a-tHh"/>
+                            <constraint firstItem="qn1-Uk-Kka" firstAttribute="leading" secondItem="nsK-8J-0TW" secondAttribute="leading" id="FPR-b9-Ize"/>
+                            <constraint firstItem="hCy-1Z-Oze" firstAttribute="top" secondItem="C3E-bl-Omg" secondAttribute="bottom" constant="8" symbolic="YES" id="Ni6-Ug-CcQ"/>
+                            <constraint firstItem="Cao-3t-7fW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="R0Q-OQ-lDG"/>
+                            <constraint firstItem="Cao-3t-7fW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="2" id="R32-vy-qez"/>
+                            <constraint firstItem="qn1-Uk-Kka" firstAttribute="top" secondItem="Cao-3t-7fW" secondAttribute="bottom" constant="40" id="RII-2J-mqT"/>
+                            <constraint firstItem="C3E-bl-Omg" firstAttribute="top" secondItem="nsK-8J-0TW" secondAttribute="bottom" constant="8" symbolic="YES" id="SYV-jX-HEY"/>
+                            <constraint firstItem="qn1-Uk-Kka" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dp1-AL-F89"/>
+                            <constraint firstItem="C3E-bl-Omg" firstAttribute="leading" secondItem="hCy-1Z-Oze" secondAttribute="leading" id="fWH-Bc-52I"/>
+                            <constraint firstItem="Cao-3t-7fW" firstAttribute="leading" secondItem="qn1-Uk-Kka" secondAttribute="leading" id="mMT-j4-Ivb"/>
+                            <constraint firstItem="Cao-3t-7fW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n2W-3Y-xgM"/>
+                            <constraint firstItem="nsK-8J-0TW" firstAttribute="leading" secondItem="C3E-bl-Omg" secondAttribute="leading" id="zin-sm-zab"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Contacts" id="g8U-T5-Mu1" userLabel="contacts"/>
+                    <connections>
+                        <outlet property="adres" destination="nsK-8J-0TW" id="3ix-0W-XFf"/>
+                        <outlet property="foto" destination="Cao-3t-7fW" id="r1T-g1-gqF"/>
+                        <outlet property="gpsCoordinaten" destination="C3E-bl-Omg" id="urW-gm-26s"/>
+                        <outlet property="telefoonNummer" destination="hCy-1Z-Oze" id="CMy-89-z0r"/>
+                        <outlet property="volledigeNaam" destination="qn1-Uk-Kka" id="iXG-sv-GuJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="4620" y="859.52023988005999"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Rz2-UE-720">
@@ -58,6 +111,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="H92-b2-rKc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -65,12 +121,11 @@
                             <outlet property="delegate" destination="rPH-Zf-ga9" id="wpO-sF-fUC"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="b70-6h-ebP"/>
                     <navigationItem key="navigationItem" id="u2G-uB-meo"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSI-lK-wQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2796" y="859.52023988005999"/>
+            <point key="canvasLocation" x="3735.1999999999998" y="859.52023988005999"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ivi-XS-LLt">
@@ -78,16 +133,36 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8pF-87-aLX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="vew-cX-sND">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="rPH-Zf-ga9" kind="relationship" relationship="viewControllers" id="zv3-zt-oCG"/>
+                        <segue destination="dZh-bA-zFM" kind="relationship" relationship="viewControllers" id="zv3-zt-oCG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4w-JS-M22" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1856.8" y="859.52023988005999"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fob-Gv-vA6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dZh-bA-zFM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="b70-6h-ebP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Szq-ig-Do3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rPH-Zf-ga9" kind="relationship" relationship="rootViewController" id="VmG-5s-zkw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E9Z-L9-FNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2796" y="859.52023988005999"/>
         </scene>
     </scenes>
 </document>

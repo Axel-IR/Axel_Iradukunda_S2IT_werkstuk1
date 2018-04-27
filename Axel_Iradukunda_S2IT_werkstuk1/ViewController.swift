@@ -9,10 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var volledigeNaam: UILabel!
+    @IBOutlet weak var adres: UILabel!
+    @IBOutlet weak var gpsCoordinaten: UILabel!
+    @IBOutlet weak var telefoonNummer: UILabel!
+    @IBOutlet weak var foto: UIImageView!
+    var persoon:Persoon?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        foto.image=persoon!.foto
+        
+        volledigeNaam.text="\(persoon!.naam)  \(persoon!.voornaam)"
+        adres.text=persoon!.adres
+        gpsCoordinaten.text=persoon!.gpscoordinaten
+        telefoonNummer.text=persoon!.telefoonnummer
     }
 
     override func didReceiveMemoryWarning() {

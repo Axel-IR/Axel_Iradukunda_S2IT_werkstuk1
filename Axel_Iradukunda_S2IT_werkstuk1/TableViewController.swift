@@ -91,11 +91,14 @@ class TableViewController: UITableViewController {
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation*/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC=segue.destination as! ViewController
+        
+        nextVC.persoon=Personen?[(tableView.indexPathForSelectedRow?.row)!]
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+ 
 
 }
