@@ -27,7 +27,12 @@ class ViewController: UIViewController {
         gpsCoordinaten.text=persoon!.gpscoordinaten
         telefoonNummer.text=persoon!.telefoonnummer
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC=segue.destination as! ViewControllerFoto
+        
+        nextVC.persoon=persoon
+    
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
