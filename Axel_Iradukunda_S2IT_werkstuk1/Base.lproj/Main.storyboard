@@ -257,12 +257,45 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="rPH-Zf-ga9" kind="relationship" relationship="rootViewController" id="VmG-5s-zkw"/>
+                        <segue destination="rPH-Zf-ga9" kind="relationship" relationship="rootViewController" id="omb-iE-sxi"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E9Z-L9-FNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2796" y="859.52023988005999"/>
+        </scene>
+        <!--Maps-->
+        <scene sceneID="PMy-n8-IKc">
+            <objects>
+                <viewController id="adw-u6-yfO" customClass="ViewControllerMaps" customModule="Axel_Iradukunda_S2IT_werkstuk1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="det-kv-h6s"/>
+                        <viewControllerLayoutGuide type="bottom" id="IfQ-Mz-7MV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pcD-Kt-5E3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jWL-MQ-Ex8">
+                                <rect key="frame" x="0.0" y="70" width="320" height="447"/>
+                                <connections>
+                                    <outlet property="delegate" destination="adw-u6-yfO" id="bQH-FX-kj6"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IfQ-Mz-7MV" firstAttribute="top" secondItem="jWL-MQ-Ex8" secondAttribute="bottom" constant="2" id="IBG-8u-AVp"/>
+                            <constraint firstItem="jWL-MQ-Ex8" firstAttribute="top" secondItem="det-kv-h6s" secondAttribute="bottom" constant="6" id="iNR-Iy-iVP"/>
+                            <constraint firstItem="jWL-MQ-Ex8" firstAttribute="leading" secondItem="pcD-Kt-5E3" secondAttribute="leading" id="iq2-gj-e8n"/>
+                            <constraint firstAttribute="trailing" secondItem="jWL-MQ-Ex8" secondAttribute="trailing" id="wRl-EF-MSs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Maps" id="3re-By-ryc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6o-Bx-tng" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3766.875" y="1656.338028169014"/>
         </scene>
     </scenes>
 </document>
