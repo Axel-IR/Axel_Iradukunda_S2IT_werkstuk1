@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var telefoonNummer: UILabel!
     @IBOutlet weak var foto: UIImageView!
     var persoon:Persoon?
+    var Personen:Array<Persoon>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +28,22 @@ class ViewController: UIViewController {
         gpsCoordinaten.text=persoon!.gpscoordinaten
         telefoonNummer.text=persoon!.telefoonnummer
     }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextVC=segue.destination as! ViewControllerFoto
-        
-        nextVC.persoon=persoon
+        if segue.identifier == "fotoSegue"{
+            let nextVC=segue.destination as! ViewControllerFoto
+            nextVC.persoon=persoon
+        }else if segue.identifier == "mapsSegue"{            
+            let nextV=segue.destination as! ViewControllerMaps
+            nextV.persoon=persoon
+            nextV.Personen=Personen
+          
+        }
+       
+  
     
     }
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

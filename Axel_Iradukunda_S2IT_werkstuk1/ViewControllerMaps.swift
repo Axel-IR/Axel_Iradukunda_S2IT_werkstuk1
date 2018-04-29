@@ -12,16 +12,15 @@ import MapKit
 class ViewControllerMaps: UIViewController, MKMapViewDelegate {
   var locationManager = CLLocationManager()
     var persoon:Persoon?
-    var longitude:Double = 0
-    var latitude:Double = 0
-    var coordinaten:Array<String> = []
+    var Personen:Array<Persoon>?
+    @IBOutlet weak var mijnMapView: MKMapView!
+    var coordinaten:Array<String>?
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.requestAlwaysAuthorization()
         
         locationManager.startUpdatingLocation()
-        
-        
+    
         // Do any additional setup after loading the view.
     }
 
@@ -31,11 +30,23 @@ class ViewControllerMaps: UIViewController, MKMapViewDelegate {
     }
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         coordinaten=persoon!.gpscoordinaten.components(separatedBy: " ")
-        latitude=Double(coordinaten[0])!
-        longitude=Double(coordinaten[1])!
-        print(latitude)
-        print(longitude)
+      let latitude: Double = Double(coordinaten![0])!
+       let longitude: Double = Double(coordinaten![1])!
+   
+        for persona in Personen! {
+            let annotation = MKPointAnnotation()
+            annotation.title = persona.naam
+            var coord:Array<String> = persona.gpscoordinaten.components(separatedBy: " ")
+            let lat: Double = Double(coord[0])!
+            let long: Double = Double(coord[1])!
+            
+            annotation.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
+            self.mijnMapView.addAnnotation(annotation)
+            
+        }
+        
         let center = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+   
         let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: center, span: span)
         mapView.setRegion(region, animated: true)

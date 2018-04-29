@@ -14,7 +14,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        let Persoon1 = Persoon.init(naam: "Skywalker", voornaam: "Anakin", foto: #imageLiteral(resourceName: "Anakin"), adres: "Belgiëplein 1 1020 Brussel", gpscoordinaten: "50.900248 4.338791", telefoonnummer: "02 474 82 77")
-        let Persoon2 = Persoon.init(naam: "Minch", voornaam: "Yoda", foto: #imageLiteral(resourceName: "yoda"), adres: "Belgiëplein 1 1020 Brussel", gpscoordinaten: "50.900248 4.338791", telefoonnummer: "02 474 82 77")
+        let Persoon2 = Persoon.init(naam: "Minch", voornaam: "Yoda", foto: #imageLiteral(resourceName: "yoda"), adres: "Belgiëplein 1 1020 Brussel", gpscoordinaten: "50.900536 4.336562", telefoonnummer: "02 474 82 77")
         
         Personen=[Persoon1,Persoon2]
         // Uncomment the following line to preserve selection between presentations
@@ -96,6 +96,7 @@ class TableViewController: UITableViewController {
         let nextVC=segue.destination as! ViewController
         
         nextVC.persoon=Personen?[(tableView.indexPathForSelectedRow?.row)!]
+        nextVC.Personen=Personen!
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }

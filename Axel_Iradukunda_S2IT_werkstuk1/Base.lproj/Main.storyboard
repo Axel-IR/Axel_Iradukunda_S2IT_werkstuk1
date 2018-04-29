@@ -92,6 +92,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cao-3t-7fW">
                                 <rect key="frame" x="110" y="91" width="101" height="96"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAo-Yq-ieM">
+                                <rect key="frame" x="94" y="438" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Vindt mijn locatie?"/>
+                                <connections>
+                                    <segue destination="adw-u6-yfO" kind="show" identifier="mapsSegue" id="kIH-o1-1dv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -140,7 +148,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="IEP-t6-SC4">
                     <connections>
-                        <segue destination="yWf-dP-xj8" kind="show" id="Yys-hf-Mh5"/>
+                        <segue destination="yWf-dP-xj8" kind="show" identifier="fotoSegue" id="S1h-F8-wkQ"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -277,7 +285,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jWL-MQ-Ex8">
-                                <rect key="frame" x="0.0" y="70" width="320" height="447"/>
+                                <rect key="frame" x="0.0" y="72" width="320" height="439"/>
                                 <connections>
                                     <outlet property="delegate" destination="adw-u6-yfO" id="bQH-FX-kj6"/>
                                 </connections>
@@ -285,17 +293,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IfQ-Mz-7MV" firstAttribute="top" secondItem="jWL-MQ-Ex8" secondAttribute="bottom" constant="2" id="IBG-8u-AVp"/>
-                            <constraint firstItem="jWL-MQ-Ex8" firstAttribute="top" secondItem="det-kv-h6s" secondAttribute="bottom" constant="6" id="iNR-Iy-iVP"/>
-                            <constraint firstItem="jWL-MQ-Ex8" firstAttribute="leading" secondItem="pcD-Kt-5E3" secondAttribute="leading" id="iq2-gj-e8n"/>
-                            <constraint firstAttribute="trailing" secondItem="jWL-MQ-Ex8" secondAttribute="trailing" id="wRl-EF-MSs"/>
+                            <constraint firstItem="jWL-MQ-Ex8" firstAttribute="top" secondItem="det-kv-h6s" secondAttribute="bottom" constant="8" symbolic="YES" id="8x7-cC-pvn"/>
+                            <constraint firstItem="jWL-MQ-Ex8" firstAttribute="leading" secondItem="pcD-Kt-5E3" secondAttribute="leading" id="Rc0-A5-dnT"/>
+                            <constraint firstAttribute="trailing" secondItem="jWL-MQ-Ex8" secondAttribute="trailing" id="WuW-Qh-ZlE"/>
+                            <constraint firstItem="IfQ-Mz-7MV" firstAttribute="top" secondItem="jWL-MQ-Ex8" secondAttribute="bottom" constant="8" symbolic="YES" id="l8x-LD-exM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Maps" id="3re-By-ryc"/>
+                    <connections>
+                        <outlet property="mijnMapView" destination="jWL-MQ-Ex8" id="uiu-AK-bmn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6o-Bx-tng" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3766.875" y="1656.338028169014"/>
+            <point key="canvasLocation" x="4620" y="1667.9577464788733"/>
         </scene>
     </scenes>
 </document>
