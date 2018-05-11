@@ -35,8 +35,7 @@ class ViewController: UIViewController {
             nextVC.persoon=persoon
         }else if segue.identifier == "mapsSegue"{            
             let nextV=segue.destination as! ViewControllerMaps
-            nextV.persoon=persoon
-            nextV.Personen=Personen
+            nextV.persoon=persoon          
           
         }
        

@@ -96,7 +96,7 @@ class TableViewController: UITableViewController {
         let nextVC=segue.destination as! ViewController
         
         nextVC.persoon=Personen?[(tableView.indexPathForSelectedRow?.row)!]
-        nextVC.Personen=Personen!
+       
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }

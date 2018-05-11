@@ -12,7 +12,7 @@ import MapKit
 class ViewControllerMaps: UIViewController, MKMapViewDelegate {
   var locationManager = CLLocationManager()
     var persoon:Persoon?
-    var Personen:Array<Persoon>?
+   
     @IBOutlet weak var mijnMapView: MKMapView!
     var coordinaten:Array<String>?
     override func viewDidLoad() {
@@ -21,6 +21,16 @@ class ViewControllerMaps: UIViewController, MKMapViewDelegate {
         
         locationManager.startUpdatingLocation()
     
+        coordinaten=persoon!.gpscoordinaten.components(separatedBy: " ")
+        let latitude: Double = Double(coordinaten![0])!
+        let longitude: Double = Double(coordinaten![1])!
+        
+        
+        let annotation = MKPointAnnotation()
+        annotation.title = persoon!.naam
+        annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        self.mijnMapView.addAnnotation(annotation)
+        self.mijnMapView.showAnnotations(self.mijnMapView.annotations, animated: true)
         // Do any additional setup after loading the view.
     }
 
@@ -28,29 +38,7 @@ class ViewControllerMaps: UIViewController, MKMapViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        coordinaten=persoon!.gpscoordinaten.components(separatedBy: " ")
-      let latitude: Double = Double(coordinaten![0])!
-       let longitude: Double = Double(coordinaten![1])!
-   
-        for persona in Personen! {
-            let annotation = MKPointAnnotation()
-            annotation.title = persona.naam
-            var coord:Array<String> = persona.gpscoordinaten.components(separatedBy: " ")
-            let lat: Double = Double(coord[0])!
-            let long: Double = Double(coord[1])!
-            
-            annotation.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
-            self.mijnMapView.addAnnotation(annotation)
-            
-        }
-        
-        let center = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-   
-        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        let region = MKCoordinateRegion(center: center, span: span)
-        mapView.setRegion(region, animated: true)
-    }
+
 
     /*
     // MARK: - Navigation

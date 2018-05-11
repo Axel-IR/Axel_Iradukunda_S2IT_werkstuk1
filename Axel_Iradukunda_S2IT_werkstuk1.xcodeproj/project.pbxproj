@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F94FE4C2093C3E8000417BF /* ViewControllerFoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F94FE4B2093C3E8000417BF /* ViewControllerFoto.swift */; };
+		3FAAC7A1209704D100CD6DE5 /* ViewControllerMainMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAAC7A0209704D100CD6DE5 /* ViewControllerMainMap.swift */; };
 		3FE3B7E2208A557C000B53AF /* Persoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3B7E1208A557C000B53AF /* Persoon.swift */; };
 		3FE3B7E4208A5D5C000B53AF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3B7E3208A5D5C000B53AF /* TableViewController.swift */; };
 		3FFC67DD208684450089D96F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFC67DC208684450089D96F /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		3F94FE4B2093C3E8000417BF /* ViewControllerFoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerFoto.swift; sourceTree = "<group>"; };
+		3FAAC7A0209704D100CD6DE5 /* ViewControllerMainMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMainMap.swift; sourceTree = "<group>"; };
 		3FE3B7E1208A557C000B53AF /* Persoon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persoon.swift; sourceTree = "<group>"; };
 		3FE3B7E3208A5D5C000B53AF /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3FFC67D9208684450089D96F /* Axel_Iradukunda_S2IT_werkstuk1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Axel_Iradukunda_S2IT_werkstuk1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 				3FE3B7E3208A5D5C000B53AF /* TableViewController.swift */,
 				3F94FE4B2093C3E8000417BF /* ViewControllerFoto.swift */,
 				3FFD4BF12094A43F00713F7A /* ViewControllerMaps.swift */,
+				3FAAC7A0209704D100CD6DE5 /* ViewControllerMainMap.swift */,
 			);
 			path = Axel_Iradukunda_S2IT_werkstuk1;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FAAC7A1209704D100CD6DE5 /* ViewControllerMainMap.swift in Sources */,
 				3F94FE4C2093C3E8000417BF /* ViewControllerFoto.swift in Sources */,
 				3FFC67DF208684450089D96F /* ViewController.swift in Sources */,
 				3FFD4BF22094A43F00713F7A /* ViewControllerMaps.swift in Sources */,
